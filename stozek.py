@@ -3,3 +3,5 @@ def objetosc_stozka(r, h):
     return objetosc
 
 print(objetosc_stozka(3, 100))
+
+assert objetosc_stozka(3, 100) == 942
