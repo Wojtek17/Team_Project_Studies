@@ -35,7 +35,7 @@ class Pracownik:
 
 df=pd.read_csv('/Users/wojtekmarszalek/Desktop/pracownicy.csv')
 
-for index, data in df[:4].iterrows():
+for index, data in df.iterrows():
     pracownik=Pracownik(data["imię"], data["nazwisko"], data['pensja'])
     print(str(pracownik))
     print("Wynagrodzenie netto: "+str(pracownik.oblicz_netto(250)))
