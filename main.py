@@ -1,3 +1,14 @@
+#ostroslup
+import math
+
+def objetosc_stozka(r, h):
+    objetosc = 1/3 * 3.14 * r**2 * h
+    return objetosc
+
+print(objetosc_stozka(3, 100))
+
+assert objetosc_stozka(3, 100) == 942
+
 def cube_calculations(a):
     pole=6*(a**2)
     objetosc=a**3
@@ -17,8 +28,6 @@ print("Objetosc kuli wynosi " + str(objetosc_kuli(5)))
 assert objetosc_kuli(5)==523.33
 assert objetosc_kuli(8)==2143.57
 
-#ostroslup
-import math
 def ostroslup_trojkatny(a,h,H):
     pole=round((math.pow(a,2)*math.sqrt(3))/4+(3*a*h)/2,2)
     objetosc=round((math.pow(a,2)*math.sqrt(3)*H)/12,2)
