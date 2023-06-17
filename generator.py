@@ -61,4 +61,4 @@ df=pd.DataFrame(names)
 df["nazwisko"]=surnames
 df["pensja"]=salaries
 df.rename({0:"imię"},axis=1, inplace=True)
-df
+df.to_csv('/Users/wojtekmarszalek/Desktop/pracownicy.csv')
