@@ -12,7 +12,7 @@ class Pracownik:
         podstawa_zdrowotna=self.pensja-skladki_zus
         skladka_zdrowotna=podstawa_zdrowotna*0.09
         podstawa_podatek=round(self.pensja-skladki_zus-kup)
-        podatek=(0.12*podstawa_podatek)-300
+        podatek=round((0.12*podstawa_podatek)-300,2)
         wynagrodzenie_netto=round(self.pensja-skladki_zus-skladka_zdrowotna-podatek,2)
         return self.pensja, skladki_zus, podstawa_zdrowotna, skladka_zdrowotna, podstawa_podatek, podatek, wynagrodzenie_netto
     
