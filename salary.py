@@ -14,7 +14,13 @@ class Pracownik:
         podstawa_podatek=round(self.pensja-skladki_zus-kup)
         podatek=round((0.12*podstawa_podatek)-300,2)
         wynagrodzenie_netto=round(self.pensja-skladki_zus-skladka_zdrowotna-podatek,2)
-        return self.pensja, skladki_zus, podstawa_zdrowotna, skladka_zdrowotna, podstawa_podatek, podatek, wynagrodzenie_netto
+        return wynagrodzenie_netto
+    
+    def oblicz_koszty_pracodawcy(self):
+        skladki_pracodawcy=(0.0976*self.pensja)+(0.065*self.pensja)+(0.0167*self.pensja)+(0.0245*self.pensja)+(0.0010*self.pensja)
+        koszt_pracodawcy=round(self.pensja+skladki_pracodawcy,2)
+        return koszt_pracodawcy
     
     pracownik_wojtek=Pracownik("Wojtek","Marszalek",3500)
     print(pracownik_wojtek.oblicz_netto(250))
+    print(pracownik_wojtek.oblicz_koszty_pracodawcy())
